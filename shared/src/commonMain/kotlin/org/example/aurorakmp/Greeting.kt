@@ -1,5 +1,8 @@
 package org.example.aurorakmp
 
+import ru.auroraos.kmp.qtbindings.QtExport
+
+@QtExport
 class Greeting {
     private val platform = getPlatform()
 

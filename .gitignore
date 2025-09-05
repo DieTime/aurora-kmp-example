@@ -16,3 +16,11 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+auroraApp/build
+auroraApp/.mb2
+auroraApp/documentation.list
+auroraApp/RPMS
+auroraApp/*.o
+auroraApp/com.example.aurorakmp
+auroraApp/Makefile
+auroraApp/moc_*

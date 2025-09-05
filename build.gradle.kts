@@ -6,4 +6,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform) apply false
     alias(libs.plugins.composeCompiler) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
+
+    id("com.google.devtools.ksp") version "2.2.10-2.0.2" apply false
+    id("ru.auroraos.kmp.qtbindings") version "0.1.0" apply false
 }

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=com.example.aurorakmp
+Exec=/usr/bin/com.example.aurorakmp
+Name=Aurora KMP
+
+[X-Application]
+Permissions=
+OrganizationName=com.example
+ApplicationName=aurorakmp
