@@ -44,6 +44,7 @@ kotlin {
             dependencies {
                 implementation("io.ktor:ktor-client-curl:3.1.2-aurora")
                 implementation("app.cash.sqldelight:native-driver:2.1.0")
+                implementation("ru.auroraos.kmp:ak-path-info:0.0.1")
             }
         }
     }

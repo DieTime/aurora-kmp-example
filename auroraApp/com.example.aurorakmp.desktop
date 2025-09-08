@@ -6,6 +6,6 @@ Exec=/usr/bin/com.example.aurorakmp
 Name=Aurora KMP
 
 [X-Application]
-Permissions=Internet
+Permissions=Internet;UserDirs
 OrganizationName=com.example
 ApplicationName=aurorakmp
