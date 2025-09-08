@@ -1,0 +1,14 @@
+CREATE TABLE visit (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    datetime TEXT NOT NULL
+);
+
+insertCurrentVisit:
+INSERT INTO visit (datetime)
+VALUES (strftime('%d.%m.%Y %H:%M:%S', 'now', 'localtime'));
+
+getLastVisits:
+SELECT *
+FROM visit
+ORDER BY id DESC
+LIMIT 10;

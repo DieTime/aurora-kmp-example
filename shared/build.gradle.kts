@@ -8,9 +8,14 @@ plugins {
     id("com.google.devtools.ksp")
     id("ru.auroraos.kmp.qtbindings")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("app.cash.sqldelight")
 }
 
 kotlin {
+    compilerOptions {
+        freeCompilerArgs.add("-Xexpect-actual-classes")
+    }
+
     androidTarget {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
@@ -33,6 +38,7 @@ kotlin {
         }
         androidMain.dependencies {
             implementation("io.ktor:ktor-client-okhttp:3.1.2")
+            implementation("app.cash.sqldelight:android-driver:2.1.0")
         }
         val auroraMain by getting {
             dependencies {
@@ -51,6 +57,14 @@ android {
     }
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
+    }
+}
+
+sqldelight {
+    databases {
+        create("VisitDatabase") {
+            packageName.set("com.example.aurorakmp.cache")
+        }
     }
 }
 
