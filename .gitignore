@@ -24,3 +24,6 @@ auroraApp/*.o
 auroraApp/com.example.aurorakmp
 auroraApp/Makefile
 auroraApp/moc_*
+auroraApp/*.pro.user
+build-com.example.aurorakmp-*
+scripts
