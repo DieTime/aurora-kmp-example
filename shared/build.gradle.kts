@@ -34,6 +34,11 @@ kotlin {
         androidMain.dependencies {
             implementation("io.ktor:ktor-client-okhttp:3.1.2")
         }
+        val auroraMain by getting {
+            dependencies {
+                implementation("io.ktor:ktor-client-curl:3.1.2-aurora")
+            }
+        }
     }
 }
 

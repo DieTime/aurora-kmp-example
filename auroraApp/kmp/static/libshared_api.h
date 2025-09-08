@@ -71,6 +71,15 @@ typedef struct {
 } libshared_kref_kotlin_collections_List;
 typedef struct {
   libshared_KNativePtr pinned;
+} libshared_kref_org_example_aurorakmp_GithubRepository;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_kotlin_Function1;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_io_ktor_client_HttpClient;
+typedef struct {
+  libshared_KNativePtr pinned;
 } libshared_kref_org_example_aurorakmp_Platform;
 typedef struct {
   libshared_KNativePtr pinned;
@@ -153,6 +162,10 @@ typedef struct {
             } AuroraPlatform;
             struct {
               libshared_KType* (*_type)(void);
+              libshared_kref_org_example_aurorakmp_GithubRepository (*GithubRepository)();
+            } GithubRepository;
+            struct {
+              libshared_KType* (*_type)(void);
               libshared_kref_org_example_aurorakmp_Greeting (*Greeting)();
               const char* (*greet)(libshared_kref_org_example_aurorakmp_Greeting thiz);
             } Greeting;
@@ -160,6 +173,8 @@ typedef struct {
               libshared_KType* (*_type)(void);
               const char* (*get_name)(libshared_kref_org_example_aurorakmp_Platform thiz);
             } Platform;
+            void* (*revisionAsync)(libshared_kref_org_example_aurorakmp_GithubRepository thiz);
+            libshared_kref_io_ktor_client_HttpClient (*httpClient)(libshared_kref_kotlin_Function1 config);
             libshared_kref_org_example_aurorakmp_Platform (*getPlatform)();
           } aurorakmp;
         } example;

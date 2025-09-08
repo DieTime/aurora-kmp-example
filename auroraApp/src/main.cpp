@@ -1,4 +1,5 @@
 #include "greeting.hpp"
+#include "github-repository.hpp"
 
 #include <auroraapp.h>
 #include <QGuiApplication>
@@ -6,6 +7,7 @@
 
 int main(int argc, char* argv[]) {
   qmlRegisterType<Greeting>("Shared", 1, 0, "Greeting");
+  qmlRegisterType<GithubRepository>("Shared", 1, 0, "GithubRepository");
 
   QScopedPointer<QGuiApplication> app(Aurora::Application::application(argc, argv));
   app->setOrganizationName("com.example");
