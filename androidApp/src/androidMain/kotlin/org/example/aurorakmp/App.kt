@@ -1,5 +1,6 @@
 package org.example.aurorakmp
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,7 +22,19 @@ fun App() {
             verticalArrangement = Arrangement.Center
         ) {
             val greeting = remember { Greeting().greet() }
+            var revision by remember { mutableStateOf("...") }
+
+            LaunchedEffect(Unit) {
+                try {
+                    revision = GithubRepository().revision().take(8)
+                } catch (e: Exception) {
+                    Log.e("GithubRepository", "Failed to query revision",e)
+                    revision = "unknown"
+                }
+            }
+
             Text(greeting)
+            Text("Revision: $revision")
         }
     }
 }

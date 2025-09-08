@@ -7,6 +7,7 @@ plugins {
     // QtBindings for Aurora OS
     id("com.google.devtools.ksp")
     id("ru.auroraos.kmp.qtbindings")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 kotlin {
@@ -26,7 +27,12 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            // put your Multiplatform dependencies here
+            implementation("io.ktor:ktor-client-core:3.1.2")
+            implementation("io.ktor:ktor-client-content-negotiation:3.1.2")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:3.1.2")
+        }
+        androidMain.dependencies {
+            implementation("io.ktor:ktor-client-okhttp:3.1.2")
         }
     }
 }

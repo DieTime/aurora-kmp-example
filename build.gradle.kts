@@ -9,4 +9,5 @@ plugins {
 
     id("com.google.devtools.ksp") version "2.2.10-2.0.2" apply false
     id("ru.auroraos.kmp.qtbindings") version "0.1.0" apply false
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.2.10" apply false
 }
