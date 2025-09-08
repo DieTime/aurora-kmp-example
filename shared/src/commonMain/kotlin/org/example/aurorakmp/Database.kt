@@ -5,11 +5,13 @@ import com.example.aurorakmp.cache.VisitDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.withContext
+import ru.auroraos.kmp.qtbindings.QtExport
 
 expect class DatabaseDriverFactory {
     fun createDriver(): SqlDriver
 }
 
+@QtExport
 class Database(driverFactory: DatabaseDriverFactory) {
     private val db = VisitDatabase(driverFactory.createDriver())
     private val queries = db.appDatabaseQueries

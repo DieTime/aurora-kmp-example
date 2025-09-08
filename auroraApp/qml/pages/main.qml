@@ -11,6 +11,18 @@ Page {
         id: github
     }
 
+    Database {
+        id: database
+
+        onRecordCurrentVisitCompleted: {
+            updateLastVisits()
+        }
+
+        Component.onCompleted: {
+            database.recordCurrentVisit()
+        }
+    }
+
     Column {
         anchors.centerIn: parent
 
@@ -26,6 +38,28 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             font.pixelSize: Theme.fontSizeLarge
             color: Theme.primaryColor
+        }
+
+        Label {
+            id: lastVisitsLabel
+            text: "Last visits:"
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.pixelSize: Theme.fontSizeLarge
+            color: Theme.primaryColor
+        }
+
+        SilicaListView {
+            width: parent.width
+            height: contentHeight
+            model: database.lastVisits
+            delegate: Label {
+                width: ListView.view.width
+                height: lastVisitsLabel.height
+                Label {
+                    anchors.centerIn: parent
+                    text: modelData
+                }
+            }
         }
     }
 }

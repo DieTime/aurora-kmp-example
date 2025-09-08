@@ -43,6 +43,7 @@ kotlin {
         val auroraMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-curl:3.1.2-aurora")
+                implementation("app.cash.sqldelight:native-driver:2.1.0")
             }
         }
     }

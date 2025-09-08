@@ -12,6 +12,7 @@ HEADERS += \
     $$files(kmp/static/*.h, true) \
     src/greeting.hpp \
     src/github-repository.hpp \
+    src/database.hpp \
 
 INCLUDEPATH += \
     kmp/static \
@@ -22,6 +23,7 @@ LIBS += \
     -L$$PWD/kmp/static \
     -lshared \
     -lz \ # Required for Ktor
+    -lsqlite3 \ # Required for SQLDelight
 
 AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
 

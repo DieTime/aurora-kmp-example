@@ -65,10 +65,40 @@ typedef struct {
 } libshared_kref_kotlin_ULong;
 typedef struct {
   libshared_KNativePtr pinned;
+} libshared_kref_com_example_aurorakmp_cache_VisitDatabase;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_com_example_aurorakmpcache_AppDatabaseQueries;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_com_example_aurorakmp_cache_VisitDatabase_Companion;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_app_cash_sqldelight_db_SqlSchema;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_app_cash_sqldelight_db_SqlDriver;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_app_cash_sqldelight_Query;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_app_cash_sqldelight_db_QueryResult;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_com_example_aurorakmpcache_Visit;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_kotlin_Any;
+typedef struct {
+  libshared_KNativePtr pinned;
 } libshared_kref_kotlin_collections_MutableList;
 typedef struct {
   libshared_KNativePtr pinned;
 } libshared_kref_kotlin_collections_List;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_org_example_aurorakmp_Database;
 typedef struct {
   libshared_KNativePtr pinned;
 } libshared_kref_org_example_aurorakmp_GithubRepository;
@@ -81,6 +111,9 @@ typedef struct {
 typedef struct {
   libshared_KNativePtr pinned;
 } libshared_kref_org_example_aurorakmp_Platform;
+typedef struct {
+  libshared_KNativePtr pinned;
+} libshared_kref_org_example_aurorakmp_DatabaseDriverFactory;
 typedef struct {
   libshared_KNativePtr pinned;
 } libshared_kref_org_example_aurorakmp_AuroraPlatform;
@@ -128,6 +161,44 @@ typedef struct {
           struct {
             struct {
               struct {
+                struct {
+                  libshared_KType* (*_type)(void);
+                  libshared_kref_com_example_aurorakmp_cache_VisitDatabase_Companion (*_instance)();
+                  libshared_kref_app_cash_sqldelight_db_SqlSchema (*get_Schema)(libshared_kref_com_example_aurorakmp_cache_VisitDatabase_Companion thiz);
+                  libshared_kref_com_example_aurorakmp_cache_VisitDatabase (*invoke)(libshared_kref_com_example_aurorakmp_cache_VisitDatabase_Companion thiz, libshared_kref_app_cash_sqldelight_db_SqlDriver driver);
+                } Companion;
+                libshared_KType* (*_type)(void);
+                libshared_kref_com_example_aurorakmpcache_AppDatabaseQueries (*get_appDatabaseQueries)(libshared_kref_com_example_aurorakmp_cache_VisitDatabase thiz);
+              } VisitDatabase;
+            } cache;
+          } aurorakmp;
+          struct {
+            struct {
+              libshared_KType* (*_type)(void);
+              libshared_kref_com_example_aurorakmpcache_AppDatabaseQueries (*AppDatabaseQueries)(libshared_kref_app_cash_sqldelight_db_SqlDriver driver);
+              libshared_kref_app_cash_sqldelight_Query (*getLastVisits)(libshared_kref_com_example_aurorakmpcache_AppDatabaseQueries thiz);
+              libshared_kref_app_cash_sqldelight_db_QueryResult (*insertCurrentVisit)(libshared_kref_com_example_aurorakmpcache_AppDatabaseQueries thiz);
+            } AppDatabaseQueries;
+            struct {
+              libshared_KType* (*_type)(void);
+              libshared_kref_com_example_aurorakmpcache_Visit (*Visit)(libshared_KLong id, const char* datetime);
+              const char* (*get_datetime)(libshared_kref_com_example_aurorakmpcache_Visit thiz);
+              libshared_KLong (*get_id)(libshared_kref_com_example_aurorakmpcache_Visit thiz);
+              libshared_KLong (*component1)(libshared_kref_com_example_aurorakmpcache_Visit thiz);
+              const char* (*component2)(libshared_kref_com_example_aurorakmpcache_Visit thiz);
+              libshared_kref_com_example_aurorakmpcache_Visit (*copy)(libshared_kref_com_example_aurorakmpcache_Visit thiz, libshared_KLong id, const char* datetime);
+              libshared_KBoolean (*equals)(libshared_kref_com_example_aurorakmpcache_Visit thiz, libshared_kref_kotlin_Any other);
+              libshared_KInt (*hashCode)(libshared_kref_com_example_aurorakmpcache_Visit thiz);
+              const char* (*toString)(libshared_kref_com_example_aurorakmpcache_Visit thiz);
+            } Visit;
+          } aurorakmpcache;
+        } example;
+      } com;
+      struct {
+        struct {
+          struct {
+            struct {
+              struct {
                 void* (*listGetElementByIndex)(void* ptr, libshared_KInt index);
                 libshared_KInt (*listGetSize)(void* ptr);
                 void (*mutableListAddBoolean)(libshared_kref_kotlin_collections_MutableList l, libshared_KBoolean el);
@@ -157,9 +228,18 @@ typedef struct {
           struct {
             struct {
               libshared_KType* (*_type)(void);
+              libshared_kref_org_example_aurorakmp_DatabaseDriverFactory (*DatabaseDriverFactory)();
+              libshared_kref_app_cash_sqldelight_db_SqlDriver (*createDriver)(libshared_kref_org_example_aurorakmp_DatabaseDriverFactory thiz);
+            } DatabaseDriverFactory;
+            struct {
+              libshared_KType* (*_type)(void);
               libshared_kref_org_example_aurorakmp_AuroraPlatform (*AuroraPlatform)();
               const char* (*get_name)(libshared_kref_org_example_aurorakmp_AuroraPlatform thiz);
             } AuroraPlatform;
+            struct {
+              libshared_KType* (*_type)(void);
+              libshared_kref_org_example_aurorakmp_Database (*Database)(libshared_kref_org_example_aurorakmp_DatabaseDriverFactory driverFactory);
+            } Database;
             struct {
               libshared_KType* (*_type)(void);
               libshared_kref_org_example_aurorakmp_GithubRepository (*GithubRepository)();
@@ -173,6 +253,8 @@ typedef struct {
               libshared_KType* (*_type)(void);
               const char* (*get_name)(libshared_kref_org_example_aurorakmp_Platform thiz);
             } Platform;
+            void* (*getLastVisitsAsync)(libshared_kref_org_example_aurorakmp_Database thiz);
+            void* (*recordCurrentVisitAsync)(libshared_kref_org_example_aurorakmp_Database thiz);
             void* (*revisionAsync)(libshared_kref_org_example_aurorakmp_GithubRepository thiz);
             libshared_kref_io_ktor_client_HttpClient (*httpClient)(libshared_kref_kotlin_Function1 config);
             libshared_kref_org_example_aurorakmp_Platform (*getPlatform)();
