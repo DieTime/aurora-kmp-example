@@ -25,6 +25,16 @@ A simple example of using KMP on the Aurora OS.
 - Android (KMP + Compose)
 - Aurora x64 (KMP + QML)
 
+## Clone repository
+
+> [!NOTE]  
+> Git LFS should be installed on the system.
+
+```shell
+$ git clone https://github.com/DieTime/aurora-kmp-example.git
+$ cd aurora-kmp-example
+```
+
 ## Build project for Android
 
 ```shell
